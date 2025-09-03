@@ -3,6 +3,9 @@ from google.cloud import storage
 from zoneinfo import ZoneInfo
 
 def write_log(event=None, context=None):
+    # for this ZoneInfo, we can import directly the specific time zone (now = datetime.now(ZoneInfo("Asia/Ho_Chi_Minh")).strftime("%Y-%m-%d %H:%M:%S"))  
+    # or no need (now = datetime.now().strftime("%Y-%m-%d %H:%M:%S") ) and we can add time zone in create schedule job part
+    
     now = datetime.now(ZoneInfo("Asia/Ho_Chi_Minh")).strftime("%Y-%m-%d %H:%M:%S")
     message = f"Hi guys! [{now}]"
 
