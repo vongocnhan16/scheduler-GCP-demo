@@ -20,13 +20,6 @@ gcloud scheduler jobs create http write-log-job \
 --schedule "*/1 * * * *" \
 --uri "YOUR_CLOUD_FUNCTION_URL" \
 --http-method GET
-* Note: setup schedule
-* * * * *
-| | | | |
-| | | | └─ Day of week (0-6, Sunday=0)
-| | | └── Month (1-12)
-| | └─── Day of month (1-31)
-| └──── Hour (0-23)
-└───── Minute (0-59)
+
 
   
